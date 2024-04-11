@@ -1,0 +1,123 @@
+appConfig:
+  theme: thebe
+  layout: auto
+  iconSize: large
+  language: en
+  customColors:
+    thebe:
+      primary: '#00CCB4'
+      background: '#2e1452'
+      background-darker: '#002402'
+    dashy-docs:
+      primary: '#f5f5f5'
+      background: '#202020'
+      background-darker: '#121212'
+    color-block:
+      primary: '#afeb5c'
+      background: '#f6f6f6'
+      background-darker: '#fff'
+pageInfo:
+  title: Foxtrot's Dashboard
+  description: Just a man who’s good at what he does
+  navLinks:
+    - title: Notes
+      path: https://github.com/foxtrotdelta7/thefoxden
+      target: newtab
+    - title: GitHub
+      path: https://github.com/Lissy93/dashy
+      target: newtab
+    - title: Documentation
+      path: https://dashy.to/docs
+      target: newtab
+  footerText: ''
+sections:
+  - name: Media
+    icon: fas fa-network-wired
+    displayData:
+      sortBy: alphabetical
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Plex
+        description: Media
+        icon: si-plex
+        url: https://app.plex.tv/desktop/#!
+        target: newtab
+        id: 0_480_plex
+      - title: DelCloudo
+        description: NextCloud
+        icon: si-nextcloud
+        url: https://192.168.5.213:9001/apps/dashboard/
+        target: newtab
+        id: 1_480_delcloudo
+      - title: YouTube
+        icon: si-youtube
+        url: https://www.youtube.com/
+        target: newtab
+        id: 2_480_youtube
+  - name: Server
+    icon: si-proxmox
+    displayData:
+      sortBy: alphabetical
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Foxhound
+        description: Proxmox
+        icon: fas fa-user-secret
+        url: 'https://192.168.5.187:8006/#v1:0:18:4:::::::'
+        target: newtab
+        id: 0_631_foxhound
+      - title: TrueNAS
+        description: Scale
+        icon: si-truenas
+        url: http://knight.data/ui/sessions/signin
+        target: newtab
+        id: 1_631_truenas
+      - title: Pi-Hole
+        description: LXC Proxmox
+        icon: si-pihole
+        url: http://192.168.5.222/admin/
+        target: newtab
+        id: 2_631_pihole
+      - title: Status Page
+        description: Uptime Kuma
+        icon: si-uptimekuma
+        url: http://192.168.5.236:3001/dashboard
+        target: newtab
+        id: 3_631_statuspage
+      - title: Home Assistant
+        icon: si-homeassistant
+        url: http://192.168.5.221:8123/lovelace/0
+        target: newtab
+        id: 4_631_homeassistant
+  - name: Contianers
+    icon: si-portainer
+    displayData:
+      sortBy: alphabetical
+      rows: 2
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Hogwarts
+        description: Dumbledore-Portianer
+        icon: fab fa-brands fa-docker
+        url: https://hogwarts.prod:9443/#!/home
+        target: newtab
+        id: 0_1046_hogwarts
+      - title: Serverus
+        description: Portianer
+        icon: fab fa-brands fa-docker
+        url: https://192.168.5.236:9443/
+        target: newtab
+        id: 1_1046_serverus
+      - title: Racher-Dev
+        description: Dev
+        icon: fab fa-brands fa-docker
+        url: https://192.168.6.13:9443
+        id: 2_1046_racherdev

@@ -1,0 +1,7 @@
+- name: add sudoers file for foxtrot
+  copy:
+      src: sudoer_foxtrot
+      dest: /etc/sudoers.d/foxtrot
+      owner: root
+      group: root
+      mode: 0440

@@ -1,0 +1,20 @@
+---
+- hosts: all
+  become: true
+  tasks: 
+
+  - name: create user
+    tags: always
+    user:
+      name: #insert username
+      groups: root
+
+- hosts: all
+  become: true
+  roles:
+    - userssh
+
+- hosts: all
+  become: true
+  roles:
+    - sudo

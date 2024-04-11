@@ -1,0 +1,4 @@
+- name: add ssh key for username
+  authorized_key: 
+      user: username
+      key: "ssh-key"

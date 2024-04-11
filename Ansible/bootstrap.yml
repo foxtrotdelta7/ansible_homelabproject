@@ -1,0 +1,36 @@
+---
+
+- hosts: all
+  become: true
+  pre_tasks:
+  
+  - name: install updates (Ubuntu)
+    tags: always
+    apt:
+      upgrade: dist
+      update_cache: yes
+    
+- hosts: all
+  become: true
+  tasks: 
+
+  - name: create user
+    tags: always
+    user:
+      name: #insert username here
+      groups: root
+
+  - name: add ssh key for foxtrot
+    tags: always
+    authorized_key: 
+      user: #iinsert username here
+      key: "ssh key"
+
+  - name: add sudoers file for foxtrot
+    tags: always
+    copy:
+      src: sudoer_username
+      dest: /etc/sudoers.d/username
+      owner: root
+      group: root
+      mode: 0440
